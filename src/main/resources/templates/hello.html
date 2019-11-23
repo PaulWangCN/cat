@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello.html</title>
+    <link href="css/hello.css" rel="stylesheet">
+    <script src="js/hello.js"></script>
+</head>
+<body>
+    <h1 id="test">INDEX</h1>
+    <div>NAME:<span th:text="${name}"></span></div>
+    <div>TIME:<span th:text="${time}"></span></div>
+    <div><button type="button" onclick="test()">TEST</button></div>
+</body>
+</html>

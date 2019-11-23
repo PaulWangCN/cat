@@ -1,0 +1,38 @@
+spring:
+  # 数据库连接池配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1/corollago?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&autoReconnect=true
+    username: root
+    password: null
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  mvc:
+    servlet:
+      # 项目启动根路径
+      path: /
+  # 应用名称
+  application:
+    name: cat
+  # 页面配置
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+logging:
+  pattern:
+    #%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %green(at %class.%method) \\(%file:%line\\) %n%clr(>>>>>>) %m%n%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr([%t]){faint} \\(%file:%line\\) %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+  level:
+    org.springframework: warn
+    ccom.zaxxer.hikari: info
+    com.wangjx.cat.aop: info
+  file:
+    # 只保存10天日志
+    max-history: 10
+    path: logs
+
+
+
+
