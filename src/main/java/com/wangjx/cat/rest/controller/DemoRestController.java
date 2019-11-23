@@ -19,6 +19,10 @@ public class DemoRestController {
 
     private final TUserMapper tUserMapper;
 
+    /**
+     * 将 TUserMapper 注入
+     * @param tUserMapper
+     */
     public DemoRestController(TUserMapper tUserMapper) {
         this.tUserMapper = tUserMapper;
     }
