@@ -31,6 +31,7 @@ logging:
   file:
     # 只保存10天日志
     max-history: 10
+    # 日志存放路径
     path: logs
 
 
